@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Motivation - Transformez votre vie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #764ba2;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #764ba2; }
+        }
+        
+        .motivation-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.5s;
+        }
+        
+        .motivation-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+        }
+        
+        .glow {
+            box-shadow: 0 0 15px rgba(118, 75, 162, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-fire text-purple-600 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-purple-600">Omar Motivation</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="text-gray-700 hover:text-purple-600 transition">Accueil</a>
+                    <a href="#citations" class="text-gray-700 hover:text-purple-600 transition">Citations</a>
+                    <a href="#conseils" class="text-gray-700 hover:text-purple-600 transition">Conseils</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#accueil" class="block py-2 text-gray-700 hover:text-purple-600 transition">Accueil</a>
+            <a href="#citations" class="block py-2 text-gray-700 hover:text-purple-600 transition">Citations</a>
+            <a href="#conseils" class="block py-2 text-gray-700 hover:text-purple-600 transition">Conseils</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-purple-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient pt-24 pb-20 md:pt-32 md:pb-28 px-4 text-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Libérez votre <span class="typewriter">potentiel</span></h1>
+                <p class="text-xl mb-8">Découvrez la puissance de la motivation avec Omar. Transformez vos rêves en réalité grâce à des conseils pratiques et des citations inspirantes.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#citations" class="bg-white text-purple-600 font-bold py-3 px-6 rounded-full hover:bg-purple-100 transition duration-300 text-center">Commencer</a>
+                    <a href="#contact" class="border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-purple-600 transition duration-300 text-center">Nous contacter</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Personne motivée" class="rounded-lg shadow-2xl floating w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-lg bg-purple-50">
+                    <div class="text-purple-600 text-4xl font-bold mb-2">15K+</div>
+                    <div class="text-gray-700">Personnes motivées</div>
+                </div>
+                <div class="p-6 rounded-lg bg-purple-50">
+                    <div class="text-purple-600 text-4xl font-bold mb-2">750+</div>
+                    <div class="text-gray-700">Citations inspirantes</div>
+                </div>
+                <div class="p-6 rounded-lg bg-purple-50">
+                    <div class="text-purple-600 text-4xl font-bold mb-2">10</div>
+                    <div class="text-gray-700">Années d'expérience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citations Section -->
+    <section id="citations" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-purple-600">Citations Motivantes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Citation 1 -->
+                <div class="quote-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4">"</div>
+                    <p class="text-gray-700 text-lg mb-6">Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte.</p>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Winston Churchill</div>
+                            <div class="text-gray-500 text-sm">Ancien Premier Ministre</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Citation 2 -->
+                <div class="quote-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4">"</div>
+                    <p class="text-gray-700 text-lg mb-6">La seule limite à notre réalisation de demain sera nos doutes d'aujourd'hui.</p>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Franklin D. Roosevelt</div>
+                            <div class="text-gray-500 text-sm">Ancien Président des USA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Citation 3 -->
+                <div class="quote-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4">"</div>
+                    <p class="text-gray-700 text-lg mb-6">Ne regardez pas en arrière avec colère, ni vers l'avant avec peur, mais autour de vous avec attention.</p>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">James Thurber</div>
+                            <div class="text-gray-500 text-sm">Écrivain</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Citation 4 -->
+                <div class="quote-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4">"</div>
+                    <p class="text-gray-700 text-lg mb-6">La vie, c'est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre.</p>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Albert Einstein</div>
+                            <div class="text-gray-500 text-sm">Physicien</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Citation 5 -->
+                <div class="quote-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4">"</div>
+                    <p class="text-gray-700 text-lg mb-6">Le courage n'est pas l'absence de peur, mais la capacité de vaincre ce qui fait peur.</p>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Nelson Mandela</div>
+                            <div class="text-gray-500 text-sm">Ancien Président</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Citation 6 -->
+                <div class="quote-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4">"</div>
+                    <p class="text-gray-700 text-lg mb-6">La meilleure façon de prédire l'avenir est de le créer.</p>
+                    <div class="flex items-center">
+                        <div class="bg-purple-100 p-2 rounded-full mr-4">
+                            <i class="fas fa-user text-purple-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold">Peter Drucker</div>
+                            <div class="text-gray-500 text-sm">Consultant</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="new-quote" class="bg-purple-600 text-white font-bold py-3 px-8 rounded-full hover:bg-purple-700 transition duration-300">
+                    Nouvelle Citation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images 3D de Motivation -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-purple-600">Inspiration 3D</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Image 1 -->
+                <div class="motivation-3d rounded-lg overflow-hidden shadow-lg glow">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Motivation 3D" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2 text-purple-600">Dépassement de soi</h3>
+                        <p class="text-gray-600">Chaque jour est une nouvelle opportunité de devenir une meilleure version de vous-même.</p>
+                    </div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="motivation-3d rounded-lg overflow-hidden shadow-lg glow">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Motivation 3D" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2 text-purple-600">Persévérance</h3>
+                        <p class="text-gray-600">La persévérance transforme l'échec en accomplissement extraordinaire.</p>
+                    </div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="motivation-3d rounded-lg overflow-hidden shadow-lg glow">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Motivation 3D" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2 text-purple-600">Confiance</h3>
+                        <p class="text-gray-600">La confiance en soi est le premier secret du succès.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conseils Section -->
+    <section id="conseils" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-purple-600">Conseils Pratiques</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Conseil 1 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-bullseye text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Fixez des objectifs clairs</h3>
+                        <p class="text-gray-600">Définissez des objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes, Temporellement définis). Écrivez-les et révisez-les régulièrement.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 2 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-clock text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Créez une routine</h3>
+                        <p class="text-gray-600">Une routine matinale productive peut définir le ton de votre journée. Incluez exercice, méditation et planification.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 3 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-book text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Apprenez continuellement</h3>
+                        <p class="text-gray-600">Consacrez 30 minutes par jour à lire ou écouter du contenu éducatif. Le savoir est le pouvoir.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 4 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-heart text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Prenez soin de vous</h3>
+                        <p class="text-gray-600">Un esprit sain dans un corps sain. Dormez suffisamment, mangez bien et faites de l'exercice régulièrement.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 5 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-users text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Entourez-vous bien</h3>
+                        <p class="text-gray-600">Votre environnement influence votre succès. Entourez-vous de personnes positives et ambitieuses.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 6 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-tasks text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Priorisez vos tâches</h3>
+                        <p class="text-gray-600">Utilisez la matrice Eisenhower pour distinguer l'urgent de l'important et maximiser votre productivité.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 7 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-brain text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Développez votre mindset</h3>
+                        <p class="text-gray-600">Adoptez un état d'esprit de croissance. Voyez les défis comme des opportunités d'apprentissage.</p>
+                    </div>
+                </div>
+                
+                <!-- Conseil 8 -->
+                <div class="flex items-start bg-white p-6 rounded-lg shadow-sm">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4 mt-1">
+                        <i class="fas fa-hand-holding-heart text-purple-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Pratiquez la gratitude</h3>
+                        <p class="text-gray-600">Tenez un journal de gratitude quotidien pour cultiver une attitude positive et reconnaissante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-purple-600">Témoignages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Témoignage 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md border border-purple-100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Les conseils d'Omar ont transformé ma vie. J'ai appris à me fixer des objectifs clairs et à les atteindre systématiquement. Ma productivité a augmenté de 200% !"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold">Sarah K.</div>
+                            <div class="text-gray-500 text-sm">Entrepreneure</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Témoignage 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md border border-purple-100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Grâce aux citations quotidiennes et aux conseils pratiques, j'ai retrouvé ma motivation perdue. Aujourd'hui, je dirige ma propre entreprise avec confiance."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jean" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold">Jean P.</div>
+                            <div class="text-gray-500 text-sm">PDG</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-purple-600 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Restons en contact</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Envoyez-nous un message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2">Votre nom</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-purple-700 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-white">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Votre email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-purple-700 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-white">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Votre message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-purple-700 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-purple-600 font-bold py-3 px-6 rounded-full hover:bg-purple-100 transition duration-300">
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Nos coordonnées</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Adresse</h4>
+                                <p>Pikine-Icotaf, Dakar, Sénégal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>gomisomar27@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Téléphone</h4>
+                                <p>+221 77 856 91 47</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Horaires</h4>
+                                <p>Lundi - Vendredi: 8h - 18h</p>
+                                <p>Samedi: 9h - 13h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Suivez-nous</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-purple-500 p-3 rounded-full hover:bg-purple-400 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-purple-500 p-3 rounded-full hover:bg-purple-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-purple-500 p-3 rounded-full hover:bg-purple-400 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-purple-500 p-3 rounded-full hover:bg-purple-400 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-purple-600">Abonnez-vous à notre newsletter</h2>
+            <p class="text-gray-600 mb-6">Recevez chaque semaine des citations motivantes et des conseils exclusifs directement dans votre boîte mail.</p>
+            <div class="flex flex-col sm:flex-row justify-center max-w-md mx-auto">
+                <input type="email" placeholder="Votre email" class="px-4 py-3 rounded-l-full sm:rounded-r-none rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 mb-2 sm:mb-0 w-full">
+                <button class="bg-purple-600 text-white font-bold px-6 py-3 rounded-r-full sm:rounded-l-none rounded-full hover:bg-purple-700 transition duration-300">
+                    S'abonner
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-fire text-purple-400 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">Omar Motivation</span>
+                    </div>
+                    <p class="text-gray-400">Transformez votre vie grâce à la motivation quotidienne et des conseils pratiques.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#citations" class="text-gray-400 hover:text-white transition">Citations</a></li>
+                        <li><a href="#conseils" class="text-gray-400 hover:text-white transition">Conseils</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Ressources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ebooks gratuits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Podcast</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Formations</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Légal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Omar Motivation. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // New Quote Generator
+        const quotes = [
+            {
+                text: "Le succès, c'est d'aller d'échec en échec sans perdre son enthousiasme.",
+                author: "Winston Churchill",
+                title: "Ancien Premier Ministre"
+            },
+            {
+                text: "La vie, c'est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre.",
+                author: "Albert Einstein",
+                title: "Physicien"
+            },
+            {
+                text: "La seule façon de faire du bon travail est d'aimer ce que vous faites.",
+                author: "Steve Jobs",
+                title: "Cofondateur d'Apple"
+            },
+            {
+                text: "Ne laissez pas ce que vous ne pouvez pas faire interférer avec ce que vous pouvez faire.",
+                author: "John Wooden",
+                title: "Entraîneur de basket"
+            },
+            {
+                text: "Le courage n'est pas l'absence de peur, mais la capacité de vaincre ce qui fait peur.",
+                author: "Nelson Mandela",
+                title: "Ancien Président sud-africain"
+            },
+            {
+                text: "La meilleure façon de prédire l'avenir est de le créer.",
+                author: "Peter Drucker",
+                title: "Consultant en management"
+            },
+            {
+                text: "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès.",
+                author: "Albert Schweitzer",
+                title: "Médecin et philosophe"
+            },
+            {
+                text: "La discipline est le pont entre les objectifs et l'accomplissement.",
+                author: "Jim Rohn",
+                title: "Entrepreneur"
+            },
+            {
+                text: "Votre temps est limité, ne le gâchez pas en menant une existence qui n'est pas la vôtre.",
+                author: "Steve Jobs",
+                title: "Cofondateur d'Apple"
+            },
+            {
+                text: "La seule personne que vous êtes destiné à devenir est la personne que vous décidez d'être.",
+                author: "Ralph Waldo Emerson",
+                title: "Écrivain"
+            },
+            {
+                text: "Croire en soi est le premier secret du succès.",
+                author: "Ralph Waldo Emerson",
+                title: "Écrivain"
+            },
+            {
+                text: "L'avenir appartient à ceux qui croient en la beauté de leurs rêves.",
+                author: "Eleanor Roosevelt",
+                title: "Ancienne Première Dame des USA"
+            }
+        ];
+        
+        const quoteBtn = document.getElementById('new-quote');
+        const quoteCards = document.querySelectorAll('.quote-card');
+        
+        quoteBtn.addEventListener('click', () => {
+            quoteCards.forEach((card, index) => {
+                const randomIndex = Math.floor(Math.random() * quotes.length);
+                const quote = quotes[randomIndex];
+                
+                card.querySelector('p').textContent = `"${quote.text}"`;
+                card.querySelectorAll('div')[3].textContent = quote.author;
+                card.querySelectorAll('div')[4].textContent = quote.title;
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
